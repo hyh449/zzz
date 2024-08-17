@@ -1,7 +1,7 @@
 function calculateLungCancerRisk(age, smokingYears, dailyCigarettes, race, education, bodymassindex, copd, hxca, fmhca, smoker, yearssincequittingsmoking) {
     // Logodds 수식을 계산
     let logodds = (0.0778868 * (age - 62)) + race - (0.0812744 * (education - 4)) - (0.0274194 * (bodymassindex - 27)) 
-        + copd + hxca + fmhca + smoker - (1.822606 * ((10 / dailyCigarettes) - 0.4021541613)) + (0.0317321 * (smokingYears - 27)) 
+        + 0.3553063 *copd + 0.4589971* hxca + 0.587185*fmhca + 0.2597431*smoker - (1.822606 * ((10 / dailyCigarettes) - 0.4021541613)) + (0.0317321 * (smokingYears - 27)) 
         - (0.0308572 * (yearssincequittingsmoking - 10)) - 4.532506;
 
     // Risk 계산 (Logodds를 사용하여)
