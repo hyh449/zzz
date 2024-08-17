@@ -1,5 +1,4 @@
 // script.js 파일 내용
-function calculateLungCancerRisk(age, smokingYears, dailyCigarettes) {
     function calculateLungCancerRisk(age, smokingYears, dailyCigarettes, race, education, bodymassindex, copd, hxca, fmhca, smoker, yearssincequittingsmoking) {
         // Logodds 수식을 계산
         let Logodds = (0.0778868 * (age - 62)) + race - (0.0812744 * (education - 4)) - (0.0274194 * (bodymassindex - 27)) 
